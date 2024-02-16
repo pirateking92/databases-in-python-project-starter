@@ -4,7 +4,7 @@ class UserAccountsRepository:
         self._connection = connection
 
     def all(self):
-        rows = self._connection.exectute('SELECT * from user_accounts')
+        rows = self._connection.execute('SELECT * from user_accounts')
         user_accounts = []
         for row in rows:
             item = UserAccounts(
